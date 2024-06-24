@@ -1,0 +1,24 @@
+POST http://localhost:3333/users
+Content-Type: application/json
+
+{
+    "name": "Si",
+    "cpf": "123.456.789-30",
+    "email": "a10@example.com",
+    "dateOfBirth": "1990-05-15",
+    "phone": "987654321",
+    "password": "senha123"
+}
+
+###
+
+GET http://localhost:3333/users/1/badge
+
+###
+
+POST  http://localhost:3333/login
+
+    {
+    "email": "ana.silva5@example.com",
+    "password": "senha123"
+    }

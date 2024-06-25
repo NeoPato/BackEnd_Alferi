@@ -2,23 +2,23 @@ POST http://localhost:3333/users
 Content-Type: application/json
 
 {
-    "name": "Si",
-    "cpf": "123.456.789-30",
-    "email": "a10@example.com",
-    "dateOfBirth": "1990-05-15",
-    "phone": "987654321",
-    "password": "senha123"
+    "name": "Ana Carolina Oliveira",
+    "cpf": "987.654.321-98",
+    "email": "ana.oliveira@example.com",
+    "dateOfBirth": "1990-03-25",
+    "phone": "+55 (11) 98765-4321",
+    "password": "hashedPassword123"
 }
 
 ###
 
-GET http://localhost:3333/users/1/badge
+GET http://localhost:3333/users/1
 
 ###
 
 POST  http://localhost:3333/login
 
     {
-    "email": "ana.silva5@example.com",
-    "password": "senha123"
+    "email": "joao@example.com",
+    "password": "sdfsdfsd"
     }

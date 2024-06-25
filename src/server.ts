@@ -1,7 +1,7 @@
 import fastify from "fastify";
 import { jsonSchemaTransform, serializerCompiler, validatorCompiler } from "fastify-type-provider-zod";
 import { registerUsers } from "./routes/register-users.js";
-import { getUsersBadge } from "./routes/get-users-badge.js";
+import { getUsersBadge } from "./routes/get-users.js";
 import fastifySwaggerUi from "@fastify/swagger-ui";
 import fastifySwagger from "@fastify/swagger";
 import fastifyCors from "@fastify/cors"
@@ -13,7 +13,7 @@ const app = fastify();
 app.register(fastifyCors, {
   origin: 'http://localhost:5173',
   methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE'],
-  allowedHeaders: ['Content-Type', 'token'],
+  allowedHeaders: ['Content-Type', 'Authorization'], // Adicionando 'Authorization' à lista de cabeçalhos permitidos
 });
 
 app.register(fastifySwagger, {

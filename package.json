@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node dist/server.mjs",
-    "build": "tsup src --format esm",
+    "build": "tsup src/error-handler.ts src/server.ts src/routes/get-users.ts src/routes/login.ts src/routes/register-users.ts src/lib/prisma.ts src/routes/_errors/bad-request.ts --format esm",
     "start:prod": "npm run build && node dist/server.mjs",
     "dev": "tsx watch --env-file .env src/server.ts",
     "db:migrate": "prisma migrate dev",
